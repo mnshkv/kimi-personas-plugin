@@ -1,0 +1,34 @@
+{
+  "$schema": "https://kimi.com/schemas/kimi.plugin.schema.json",
+  "name": "personas",
+  "version": "1.0.0",
+  "description": "Two answer-style personas for Kimi Code: ponytail (lazy senior dev — the smallest complete change, zero over-engineering) and caveman (maximum-terse replies that keep every technical fact), plus review/audit/debt skills and a memory-file compressor.",
+  "keywords": [
+    "persona",
+    "ponytail",
+    "caveman",
+    "minimalism",
+    "yagni",
+    "over-engineering",
+    "code review",
+    "audit",
+    "technical debt",
+    "token compression",
+    "brevity"
+  ],
+  "author": "DietrichGebert (ponytail) and Julius Brussee (caveman), ported to Kimi Code by mnshkv",
+  "license": "Ponytail: MIT; Caveman: Apache-2.0 (pre-3.0 MIT parts under LICENSE-MIT); port © mnshkv",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Personas",
+    "shortDescription": "Ponytail lazy-senior-dev mode and caveman terse-answer mode, with review, audit, debt and compression skills",
+    "longDescription": "Two personality skills that change how the agent writes code and answers, ported from the ponytail and caveman projects.\n\nPonytail (MIT, DietrichGebert): \"lazy senior developer\" mode — solve the whole task with the least new code, no unrequested abstractions or dependencies, mark deliberate shortcuts with `shortcut:` comments. Ships review and audit skills (senior-dev review of a change or a whole repo: bugs, security, load, missing tests, speed, what to cut), a debt ledger that harvests `shortcut:` comments, a measured benchmark scoreboard, and a quick-reference card. Levels: lite, full (default), ultra.\n\nCaveman (Apache-2.0, Julius Brussee): terse-answer persona — answer first, fluff gone, every technical fact kept verbatim. Levels: caveman, ultracave (maximum compression), megacave (Classical Chinese). caveman-compress shrinks memory files (CLAUDE.md, todo lists) into caveman format to save input tokens, with a readable backup.\n\nNothing activates on session start: personas are plain prompt skills the user turns on by asking (\"ponytail mode\", \"talk like caveman\") and off with \"stop ponytail\" / \"stop caveman\". A `personas` navigator skill helps pick the right one.",
+    "developerName": "DietrichGebert / JuliusBrussee / mnshkv",
+    "hostKind": "local"
+  },
+  "platforms": [
+    "macos",
+    "windows",
+    "linux"
+  ]
+}
